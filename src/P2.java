@@ -264,6 +264,6 @@ public class P2 extends JFrame {
 	public static void main(String[] args) throws IOException {
 		OSCMethod();
 		leftHelp = new P2(0, 0, 1);
-		rightHelp = new P2(1280, 0, 2);
+		rightHelp = new P2(1080, 0, 2);
 	}
 }
