@@ -6,7 +6,7 @@ import java.net.*;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
-public class P2 extends JFrame {
+public class JavaOSCtoTouchOSC extends JFrame {
 
 	Toolkit toolkit = Toolkit.getDefaultToolkit();
 	Dimension sizeOfScreen = toolkit.getScreenSize();
@@ -43,14 +43,14 @@ public class P2 extends JFrame {
 	static InetAddress remoteIP;
 	static InetAddress receiverIP;
 	static OSCPortOut sender;
-	static P2 leftHelp;
-	static P2 rightHelp;
+	static JavaOSCtoTouchOSC leftHelp;
+	static JavaOSCtoTouchOSC rightHelp;
 	int displayWidth;
 	int displayHeight; 
 
 	//Size ratio is 1.78
 
-	public P2(int x, int y, int z) {
+	public JavaOSCtoTouchOSC(int x, int y, int z) {
 		GraphicsDevice[] devices = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices();
 		for ( int i = 0; i < devices.length; i++ )
 		{
@@ -263,7 +263,7 @@ public class P2 extends JFrame {
 
 	public static void main(String[] args) throws IOException {
 		OSCMethod();
-		leftHelp = new P2(0, 0, 1);
-		rightHelp = new P2(1080, 0, 2);
+		leftHelp = new JavaOSCtoTouchOSC(0, 0, 1);
+		rightHelp = new JavaOSCtoTouchOSC(1080, 0, 2);
 	}
 }
