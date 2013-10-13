@@ -16,6 +16,9 @@ public class JavaOSCtoTouchOSC extends JFrame {
 	JPanel rightImagePanel = new JPanel();
 	JLabel floorLayout;
 	JLabel rightLabel;
+  // Added JScrollPane to test on smaller monitors
+  JScrollPane scrollableGridBagPanel = new JScrollPane(gridBagPanel);
+  JScrollPane scrollableRightImagePanel = new JScrollPane(rightImagePanel);
 	GridBagConstraints c = new GridBagConstraints();
 	Container contentPane;// = getContentPane();
 	ImageIcon floorMain = new ImageIcon(getClass().getResource("/images/home.png"));
@@ -101,16 +104,17 @@ public class JavaOSCtoTouchOSC extends JFrame {
 		c.gridy = 1;
 		c.gridwidth = 0;
 		gridBagPanel.add(floorLayout, c);
-
-		contentPane.add(gridBagPanel, BorderLayout.PAGE_START);
+    // Added JScrollPane to test on smaller monitors
+		contentPane.add(scrollableGridBagPanel, BorderLayout.PAGE_START);
 	}
 
 	public void RightDisplay()
 	{
 		rightLabel = new JLabel(thirtyOne);
 		rightImagePanel.add(rightLabel);
-		contentPane.add(rightImagePanel);
-	}
+    // Added JScrollPane to test on smaller monitors
+    contentPane.add(scrollableRightImagePanel);
+  }
 
 	public static void OSCMethod() throws IOException
 	{
